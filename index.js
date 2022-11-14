@@ -2,16 +2,17 @@ import Store from './modules/store.js';
 
 import Book from './modules/book.js';
 
-// import { show_hide } from './modules/dynamic-show.js';
-
-// Add date
-
-import { refreshTime, initTime } from './modules/time.js';
-
 import UI from './modules/UI.js';
 
-refreshTime();
-initTime();
+import { DateTime } from './modules/luxon.js';
+
+const the_Time = document.querySelector('#time-section');
+const showDateTime = () => {
+  const time = DateTime.now();
+  const curTime = time.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+  the_Time.textContent = curTime;
+};
+setInterval(showDateTime, 1000);
 
 const store = new Store();
 

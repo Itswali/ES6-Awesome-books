@@ -43,13 +43,13 @@ body {
 .book-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   padding-top: 50px;
   text-align: center;
 }
 
 .book-form button {
-  width: 60px;
+  width: 90px;
   align-self: center;
 }
 
@@ -103,19 +103,6 @@ a {
   align-self: flex-end;
 }
 
-#date-time {
-  height: 24px;
-  width: 98%;
-  color: #8963c6;
-
-  /* position: absolute;
-    right: 3%;
-    top: 12%; */
-  font-weight: bolder;
-  text-align: right;
-  margin-top: 5px;
-}
-
 .contact-section {
   display: flex;
   flex-direction: row;
@@ -157,4 +144,10 @@ a {
 
 #show-1 {
   display: none;
+}
+
+.time {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px;
 }
