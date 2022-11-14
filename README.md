@@ -3,7 +3,7 @@
 # Awesome Books Basic Javascript
 
 
-A basic website that allows you to add and remove books. There has been added styling to match the provided template using Bootstrap. Classes and methods were used in this project instead of objects and arrays.
+A basic website that allows you to add and remove books. There has been added styling to match the provided template using ES6. Classes and methods were used in this project instead of objects and arrays.
 
 ## Built With
 
