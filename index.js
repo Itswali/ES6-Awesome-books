@@ -8,12 +8,12 @@ import Book from './modules/book.js';
 
 import { refreshTime, initTime } from './modules/time.js';
 
+import UI from './modules/UI.js';
+
 refreshTime();
 initTime();
 
 const store = new Store();
-
-import UI from './modules/UI.js';
 
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 document.querySelector('#book-form').addEventListener('submit', (e) => {
@@ -59,4 +59,3 @@ contactshow.addEventListener('click', () => {
   add.style.display = 'none';
   contact.style.display = 'flex';
 });
-

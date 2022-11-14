@@ -15,7 +15,7 @@ function refreshTime() {
 function initTime() {
   refreshTime();
   setInterval(refreshTime, 1000);
-} 
+}
 
 // initTime();
 
