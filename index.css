@@ -1,0 +1,160 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.books-table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
+  margin-top: 60px;
+  font-weight: 400;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid grey;
+  line-height: 200%;
+  width: 98%;
+}
+
+.book-row-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 10px;
+}
+
+.book-row-content:nth-child(even) {
+  background-color: rgb(191, 185, 185);
+}
+
+.flex {
+  display: flex;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.book-form button {
+  width: 60px;
+  align-self: center;
+}
+
+.book-form input {
+  width: 30%;
+  height: 25px;
+}
+
+input::placeholder {
+  font-weight: 600;
+}
+
+.nav-bar {
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-bar h1 {
+  font-weight: 700;
+  margin: 0 50px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.main-links {
+  padding-right: 50px;
+}
+
+.main-links li {
+  list-style: none;
+  border-right: 1px solid black;
+  padding-right: 20px;
+}
+
+.main-links ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+#date-time {
+  height: 24px;
+  width: 98%;
+  color: #8963c6;
+
+  /* position: absolute;
+    right: 3%;
+    top: 12%; */
+  font-weight: bolder;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#contact > h2 {
+  font-size: 45px;
+  text-align: center;
+}
+
+#contact > *:not(h2) {
+  font-size: 20px;
+}
+
+.footer-container {
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
+  margin: 0 20px;
+  position: fixed;
+  width: 95%;
+  bottom: 0;
+  margin-bottom: 22px;
+  background-color: white;
+}
+
+.footer-container p {
+  margin: 10px 0 10px 60px;
+  font-size: 16px;
+}
+
+#book-form {
+  display: block;
+}
+
+#contact1 {
+  display: none;
+}
+
+#show-1 {
+  display: none;
+}
