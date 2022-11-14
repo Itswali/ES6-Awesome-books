@@ -6,11 +6,11 @@ import UI from './modules/UI.js';
 
 import { DateTime } from './modules/luxon.js';
 
-const the_Time = document.querySelector('#time-section');
+const tTime = document.querySelector('#time-section');
 const showDateTime = () => {
   const time = DateTime.now();
   const curTime = time.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
-  the_Time.textContent = curTime;
+  tTime.textContent = curTime;
 };
 setInterval(showDateTime, 1000);
 
