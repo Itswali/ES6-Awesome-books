@@ -2,41 +2,19 @@ import Store from './modules/store.js';
 
 import Book from './modules/book.js';
 
+// import { show_hide } from './modules/dynamic-show.js';
+
 // Add date
 
 import { refreshTime, initTime } from './modules/time.js';
 
+refreshTime();
+initTime();
+
 const store = new Store();
-class UI {
-  static displayBooks() {
-    const books = store.getBooks();
-    books.forEach((book) => UI.addBookList(book));
-  }
 
-  static addBookList(book) {
-    const bookList = document.getElementById('book-list');
+import UI from './modules/UI.js';
 
-    const content = document.createElement('div');
-    content.innerHTML = `
-    <div>${book.title} By ${book.author}</div>
-    <button id="book-num-${book.id}"class="delete">Remove</button>
-    `;
-
-    bookList.appendChild(content);
-    content.classList.add('book-row-content');
-  }
-
-  static deleteBook(element) {
-    if (element.classList.contains('delete')) {
-      element.parentElement.remove();
-    }
-  }
-
-  static clearFields() {
-    document.querySelector('#title').value = '';
-    document.querySelector('#author').value = '';
-  }
-}
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 document.querySelector('#book-form').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -56,3 +34,29 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   const id = parseInt(idString, 10);
   store.removeBook(id);
 });
+
+const list = document.getElementById('show-1');
+const add = document.getElementById('book-form');
+const contact = document.getElementById('contact1');
+const showlist = document.getElementById('listshow');
+const addshow = document.getElementById('addshow');
+const contactshow = document.getElementById('contactshow');
+
+showlist.addEventListener('click', () => {
+  list.style.display = 'flex';
+  add.style.display = 'none';
+  contact.style.display = 'none';
+});
+
+addshow.addEventListener('click', () => {
+  list.style.display = 'none';
+  add.style.display = 'flex';
+  contact.style.display = 'none';
+});
+
+contactshow.addEventListener('click', () => {
+  list.style.display = 'none';
+  add.style.display = 'none';
+  contact.style.display = 'flex';
+});
+
