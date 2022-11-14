@@ -8,7 +8,7 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 
 class AwesomeBooks {
-  static showList() {
+  static showList = () => {
     let listHtml = '';
     for (let i = 0; i < booksArray.length; i += 1) {
       listHtml += `
@@ -22,7 +22,7 @@ class AwesomeBooks {
     listSec.innerHTML = listHtml;
   }
 
-  static addBook(e) {
+  static addBook = (e) => {
     if (title.value.length > 0 && author.value.length > 0) {
       e.preventDefault();
       booksArray.push(new Book(title.value, author.value));
@@ -33,7 +33,7 @@ class AwesomeBooks {
     }
   }
 
-  static removeBook(e) {
+  static removeBook = (e) => {
     if (!e.target.matches('.btn-remove')) return;
     const { index } = e.target.dataset;
     booksArray.splice(index, 1);

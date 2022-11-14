@@ -5,7 +5,7 @@ export default class Store {
     this.count = this.getBooks().length + 1;
   }
 
-  getBooks() {
+  getBooks = () => {
     if (localStorage.getItem('books') === null) {
       this.books = [];
     } else {
@@ -14,7 +14,7 @@ export default class Store {
     return this.books;
   }
 
-  addBook(book) {
+  addBook = (book) => {
     const newBook = {
       id: this.count,
       title: book.title,
@@ -26,7 +26,7 @@ export default class Store {
     this.count += 1;
   }
 
-  removeBook(id) {
+  removeBook = (id) => {
     const books = this.getBooks();
     const filteredBooks = books.filter((book) => book.id !== id);
     localStorage.setItem('books', JSON.stringify(filteredBooks));
